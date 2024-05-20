@@ -4,9 +4,8 @@ import dotenv from 'dotenv'
 
 dotenv.config()
 const app = express()
-const port = 8000
-
 const uri = process.env.MONGO_URI
+const port = process.env.PORT || 8000
 
 const messageSchema = new mongoose.Schema({
   chatId: Number,
